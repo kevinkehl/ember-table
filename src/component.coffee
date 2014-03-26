@@ -46,7 +46,8 @@ Ember.AddeparMixins.ResizeHandlerMixin,
 
   actions:
     addColumn: Ember.K
-    sortByColumn: Ember.K
+    sortByColumn: (columnContent) ->
+      this.sendAction('sortByColumn', columnContent)
 
   onColumnSort: (column, newIndex) ->
     columns  = @get 'tableColumns'
