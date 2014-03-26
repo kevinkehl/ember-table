@@ -137,7 +137,7 @@ Ember.AddeparMixins.ResizeHandlerMixin,
   ###
   elementSizeDidChange: ->
     return unless @get('state') is 'inDOM'
-    @set '_width', @$().parent().outerWidth()
+    @set '_width', @$().parent().width()
     @set '_height', @$().parent().outerHeight()
     # we need to wait for the table to be fully rendered before antiscroll can
     # be used
